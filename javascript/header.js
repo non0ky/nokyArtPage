@@ -10,8 +10,8 @@ header.innerHTML = `
      </div>
             
     <ul>
-        <li><a href="../main/main.html">[proyect diagram]</a></li>
-        <li><a href="../about artist/aboutArtist.html">[about artist]</a></li>
+        <li><a href="../index.html">[proyect diagram]</a></li>
+        <li><a href="../html/aboutArtist.html">[about artist]</a></li>
     </ul>
     <hr>
 `; 
