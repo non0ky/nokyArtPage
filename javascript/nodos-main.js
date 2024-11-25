@@ -9,21 +9,23 @@ var nodes = new vis.DataSet([
     { id: 5, label: 'internal coding\n(2023)' },
     { id: 6, label: 'dont cry cam\n(2022)' },
     { id: 7, label: 'la tele y sus fantasmas\n(tesis)\n(2024)' },
+
     { id: 8, label: 'trappedman\n(2024)' },
     { id: 9, label: 'via del tren (quilicura)\n(2023)' }
 ]);
 
 let links = [
-    "",
-    "",
-    "../treasureMap/treasureMap.html",
+    "../html/nerd-autistic-party.html",
+    "../html/conexiones-tecnohumanas.html",
+    "../html/treasur-map.html",
 
-    "../nodos/nodos.html",
-    "../codificacion interna/codificacion.html",
-    "../dontcrycam/dontcrycamIndex.html",
-    "",
-    "../trappedMan/trappedMan.html",
-    "../linea de tren-quilicura/linea de tren-quilicura.html"
+    "../html/mind-to-node.html",
+    "../html/codificacion.html",
+    "../html/dontcrycam.html",
+    "../html/la-television-de-mi-abuelita.html",
+
+    "../html/trapped-man.html",
+    "../html/linea-de-tren-quilicura.html"
 ];
 
 var edges = new vis.DataSet([
