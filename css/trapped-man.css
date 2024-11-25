@@ -1,0 +1,23 @@
+h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.text {
+  display: block;
+  border-color: white;
+  text-align: justify;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.p {
+  margin: 10px;
+}

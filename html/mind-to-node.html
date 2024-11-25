@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mind-to-node</title>
+  <link rel="stylesheet" href="../css/mind-to-node.css">
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@latest/lib/p5.speech.js"></script>
+</head>
+
+<body>
+  <header></header>
+  <script src="../javascript/header.js"></script>
+  <div class="horiz2">
+    <div id="mynetwork"></div>
+
+    <div id="panel"> </div>
+  </div>
+  
+  <div class="horiz">
+    <div class="vertical" id="controls" style="border: 1px solid gainsboro; padding: 10px">
+      <p class="con">| add node</p>
+      <input type="text" id="nodeLabel" placeholder="ingress txt">
+      <button onclick="addNode()">add</button>
+      <hr>
+      <p class="con">| sub node</p>
+      <div id="deleteControls">
+        <div class="slider-container">
+          <label for="deleteNode">victim : <span id="deleteNodeValue">1</span></label>
+          <input type="range" class="slider" id="deleteNode" min="1" max="4" value="1"
+            oninput="updateDeleteNodeValue()">
+        </div>
+        <label for="deleteHighlightCheck">show kill</label>
+        <input type="checkbox" class="check" id="deleteHighlightCheck" onchange="highlightDeleteNode()">
+        <button onclick="deleteNode()">kill node</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="horiz" id="sliders">
+      <div class="vertical">
+        <div class="slider-container">
+          <label for="startNode">start : <span id="startNodeValue">1</span></label>
+          <input type="range" class="slider" id="startNode" min="1" max="4" value="1" oninput="updateStartNodeValue()">
+        </div>
+        <div class="slider-container">
+          <label for="endNode">end- : <span id="endNodeValue">2</span></label>
+          <input type="range" class="slider" id="endNode" min="1" max="4" value="2" oninput="updateEndNodeValue()">
+        </div>
+      </div>
+
+      <div class="vertical">
+        <div class="horiz2">
+          <button onclick="findAndHighlightPath()">find shorter path</button>
+          <button onclick="findAndHighlightPath()">find longer path </button>
+        </div>
+        <div class="horiz2">
+          <button onclick="findRandomPath()">find path in<br>random nodes </button>
+          <div id="highlightControls">
+            <label for="highlightCheck">show select </label>
+            <input class="check" type="checkbox" id="highlightCheck" onchange="toggleNodeHighlight()">
+          </div>
+        </div>
+        <button onclick="reorganizeConnections()">rumble conex</button>
+      </div>
+    </div>
+    <hr>
+    <div class="horiz" id="speechControls">
+      <div class="vertical">
+        <div class="slider-container">
+          <label for="speechSpeed">vel -- : <span id="speechSpeedValue">1</span></label>
+          <input type="range" class="slider" id="speechSpeed" min="0.1" max="4" step="0.1" value="1"
+            oninput="updateSpeechSpeed()">
+        </div>
+
+        <div class="slider-container">
+          <label for="speechPitch">pitch : <span id="speechPitchValue">1</span></label>
+          <input type="range" class="slider" id="speechPitch" min="0" max="4" step="0.1" value="1"
+            oninput="updateSpeechPitch()">
+        </div>
+
+        <div class="slider-container">
+          <label for="speechVolume">vol -- : <span id="speechVolumeValue">1</span></label>
+          <input type="range" class="slider" id="speechVolume" min="0" max="5" step="0.1" value="1"
+            oninput="updateSpeechVolume()">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="vertical">
+        <div class="slider-container">
+          <label for="voiceSelect">voice : </label>
+          <select id="voiceSelect" onchange="updateSpeechVoice()"></select>
+        </div>
+        <button onclick="speakPathLabels()">talk</button>
+        <button onclick="stopSpeech()">stopp</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script src="../javascript/mind-to-node.js"></script>
+</body>
+
+</html>

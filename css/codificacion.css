@@ -1,0 +1,47 @@
+h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contenido {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+}
+
+.text {
+  display: block;
+  border-color: white;
+  text-align: justify;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.p {
+  margin: 10px;
+}
+
+.block {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.grilla {
+  margin-right: 5px;
+}
+
+.grilla img {
+  width: 400px;
+}
+
+.grilla2 {
+  margin-right: 5px;
+}
+
+.grilla2 img {
+  width: 600px;
+}

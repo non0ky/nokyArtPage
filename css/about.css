@@ -1,0 +1,46 @@
+.contenido {
+    margin-top: 20%;
+    text-align: center;
+    padding: 5px;
+    justify-content: space-between;
+} 
+
+.contenido p{
+    text-align: justify;
+    display: inline-block;
+    max-width: 300px;
+}  
+
+.contenido button {
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border: none;
+}
+
+.contenido button a { 
+    text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    color: white;
+}
+
+.contenido a:hover {
+    animation-name: parpadeo;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes parpadeo {
+    from {
+      color: white;
+    }
+  
+    to {
+      color: black;
+    }
+  }

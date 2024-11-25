@@ -1,0 +1,32 @@
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+.contenido p {
+    text-align: justify;
+    width: 400px;
+}
+
+.contenido ul {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    
+}
+
+li {
+    list-style: none;
+    list-style-image: "https://img.icons8.com/color/20/star--v1.png";
+}
+
+.contenido ul li::before {
+    content: attr(data-icon);
+}

@@ -1,0 +1,36 @@
+h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.block {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.grilla {
+  margin-right: 5px;
+}
+
+.grilla img {
+  width: 200px;
+}
+
+.texto {
+  max-width: 500px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.banner {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.fullObra {
+  margin: 50px;
+  text-align: center;
+  width: 70%;
+}
