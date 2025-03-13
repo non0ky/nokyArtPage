@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Nerd Autistic Party - Modo 1</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #282c34;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Nerd Autistic Party</h1>
+  <div id="sketch-holder"></div>
+  <div id="controls" class="controls">
+    <div id="selector" class="selector">
+      <label for="mode-selector">Select Mode:</label>
+      <select id="mode-selector">
+        <option value="1">Modo 1</option>
+        <option value="2">Modo 2</option>
+        <option value="3">Modo 3</option>
+      </select>
+    </div>
+
+    <div id="other-controls" class="other-controls">
+      <label for="slider">Tamaño (px):</label>
+      <input type="range" id="slider" min="2" max="40" value="10">
+      <span id="valorPx">100</span> px
+
+      <label for="text-input">Text for Caligram:</label>
+      <input type="text" id="text-input" value="Default text">
+    </div>
+
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+
+  <script src="nerd-autistic-party.js"></script>
+
+  <script>
+    let video;
+    let textInput;
+    let px = 10;
+    let actScene = 1;
+
+    let controls;
+
+    let controlsHTML = [
+      `
+    <label for="slider">Tamaño (px):</label>
+    <input type="range" id="slider" min="2" max="40" value="10">
+    <span id="valorPx">100</span> px
+
+    <label for="text-input">Text for Caligram:</label>
+    <input type="text" id="text-input" value="Default text">`,
+      `
+    <h1>Control de texto para el caligrama</h1>
+    <div id="textInputs">
+        <label for="input1">Texto 1:</label><input type="text" id="input1"><br>
+        <label for="input2">Texto 2:</label><input type="text" id="input2"><br>
+        <label for="input3">Texto 3:</label><input type="text" id="input3"><br>
+        <label for="input4">Texto 4:</label><input type="text" id="input4"><br>
+        <label for="input5">Texto 5:</label><input type="text" id="input5"><br>
+        <label for="input6">Texto 6:</label><input type="text" id="input6"><br>
+        <label for="input7">Texto 7:</label><input type="text" id="input7"><br>
+        <label for="input8">Texto 8:</label><input type="text" id="input8"><br>
+        <label for="input9">Texto 9:</label><input type="text" id="input9"><br>
+        <label for="input10">Texto 10:</label><input type="text" id="input10"><br>
+    </div>
+    `,
+      `
+    <p> ee </p>
+    `
+    ];
+
+    // scene 2 OpenCV
+
+    let classifier;
+    let faces;
+    let gray;
+
+    function onOpenCvReady() {
+      console.log("OpenCV.js is ready.");
+
+      if (cv.getBuildInformation) {
+        console.log(cv.getBuildInformation());
+      }
+
+      // Inicializa los objetos de OpenCV
+      classifier = new cv.CascadeClassifier();
+      faces = new cv.RectVector(); // Inicializa el RectVector para almacenar las detecciones
+      gray = new cv.Mat(); // Inicializa la matriz para la imagen en escala de grises
+
+      // Cargar el clasificador de rostros
+      classifier.load('haarcascade_frontalface_default.xml');
+
+      // Ahora puedes continuar con el setup de p5.js
+      setup();
+    }
+
+    function setup() {
+      let canvas = createCanvas(640, 480);
+      canvas.parent('sketch-holder');
+
+      video = createCapture(VIDEO);
+      video.size(width, height);
+      video.hide();
+
+      controls = document.getElementById('other-controls');
+
+      select('#mode-selector').changed(() => {
+        actScene = int(select('#mode-selector').value());
+        controls.innerHTML = controlsHTML[actScene - 1];
+      });
+
+      // for scene 1
+      textInput = document.getElementById('text-input').value;
+
+      // for scene 2
+
+      faces = new cv.RectVector();
+      gray = new cv.Mat();
+    }
+
+    function draw() {
+      background(0);
+      switch (actScene) {
+        case 1:
+          scene1();
+          break;
+        case 2:
+          scene2()
+          break;
+        case 3:
+          scene3()
+          break;
+      }
+    }
+
+    let pas = 0;
+    function scene1() {
+      document.getElementById('slider').addEventListener('input', function () {
+        px = this.value;
+        document.getElementById('valorPx').textContent = px;
+        px = int(px);
+      });
+
+      textInput = document.getElementById('text-input').value;
+      let cha = textInput.split('');
+
+      video.loadPixels();
+      fill(255);
+
+      let ps = 0;
+
+      for (let y = 0; y < height; y += px) {
+        for (let x = 0; x < width; x += px) {
+          let i = (x + y * video.width) * 4;
+          let r = video.pixels[i + 0];
+          let g = video.pixels[i + 1];
+          let b = video.pixels[i + 2];
+          let lum = (r + g + b) / 3;
+
+          let tmñ = floor(map(lum, 0, 255, 0, px + 5));
+
+          let mov = false;
+
+          if (tmñ > 1) {
+            textSize(tmñ);
+            if (mov) {
+              text(cha[ps], x, y);
+              ps++;
+              if (ps > cha.length) ps = 0;
+            } else {
+              text(cha[(ps + pas) % cha.length], x, y);
+              ps++
+
+            }
+
+          }
+
+
+        }
+      }
+      if (frameCount % 10 == 0) pas++;
+    }
+
+    function scene2() {
+
+      image(capture, 0, 0);
+
+      if (classifier && capture.loadedmetadata) {
+        // Convertir la imagen a escala de grises
+        let src = cv.imread(capture.elt);
+        cv.cvtColor(src, gray, cv.COLOR_RGBA2GRAY, 0);
+
+        // Detectar rostros
+        classifier.detectMultiScale(gray, faces, 1.1, 3, 0);
+
+        // Dibujar rectángulos alrededor de los rostros detectados
+        for (let i = 0; i < faces.size(); i++) {
+          let face = faces.get(i);
+          noFill();
+          stroke(0, 255, 0);
+          rect(face.x, face.y, face.width, face.height);
+        }
+
+        src.delete();
+      }
+    }
+
+    function scene3() { }
+  </script>
+</body>
+
+</html>

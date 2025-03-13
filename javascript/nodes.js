@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     moveButton();
   
     button.addEventListener('click', () => {
-      window.location.href = '../node-proyect/index.html'; // Cambia 'newpage.html' por la URL deseada
+      window.location.href = '../html/mind-to-node.html'; // Cambia 'newpage.html' por la URL deseada
     });
   });
   

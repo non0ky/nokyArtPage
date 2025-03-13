@@ -2,13 +2,13 @@
 // Crear la red con nodos y edges
 var nodes = new vis.DataSet([
     { id: 1, label: 'nerd autistic party\n(2023)' },
-    { id: 2, label: 'conexiones tecno-humanas\n(2024)' },
-    { id: 3, label: 'treasure map\n(2023)' },
+    { id: 2, label: 'conexiones tecno-humanas\n(nexo)' },
+    { id: 3, label: 'treasure map\n(nexo)' },
 
     { id: 4, label: 'mind-to-node\n(2024)' },
     { id: 5, label: 'internal coding\n(2023)' },
     { id: 6, label: 'dont cry cam\n(2022)' },
-    { id: 7, label: 'la tele y sus fantasmas\n(tesis)\n(2024)' },
+    { id: 7, label: 'la televisión de mi abuelita\n(tesis)\n(2024)' },
 
     { id: 8, label: 'trappedman\n(2024)' },
     { id: 9, label: 'via del tren (quilicura)\n(2023)' }
@@ -17,9 +17,9 @@ var nodes = new vis.DataSet([
 let links = [
     "../html/nerd-autistic-party.html",
     "../html/conexiones-tecnohumanas.html",
-    "../html/treasur-map.html",
+    "../html/treasure-map.html",
 
-    "../html/mind-to-node.html",
+    "../html/nodes.html",
     "../html/codificacion.html",
     "../html/dontcrycam.html",
     "../html/la-television-de-mi-abuelita.html",
