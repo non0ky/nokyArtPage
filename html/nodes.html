@@ -5,63 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>nodes-tomind</title>
-    <link rel="stylesheet" href="../css/nodes.css">
-    <link rel="stylesheet" href="nodes-style.css">
+    <title>node-to-mind</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        #bouncingButton {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            border: 1px dashed white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
-    <header id="target"></header>
-    <script src="../javascript/header.js"></script>
-    <h1 >mind-to-node</h1>
-    <h6 class="info">[click on the node to use the node project]</h6>
-    <br>
-    <div class="contenido">
-        <div class="texto">
-            <p>Durante meses, me he propuesto experimentar con nodos o sistemas de grafos, como un reto mental autoimpuesto, un desafío puramente práctico para probarme a mí mismo como artista digital y programador, e incluso como artista algorítmico. En esta experimentación, me encontré inmerso en problemas de pensamiento, insuficiencia mental y crisis psicóticas y caóticas que se desarrollaban en redes de pensamiento recursivo y delirante. Estas experiencias me llevaron a reflexionar más profundamente sobre mi propuesta inicial y sobre cómo percibo el funcionamiento de mi cerebro.</p>
-            <br>
-            <br>
-            <ul>
-                <li>La red de nodos debe ser desorganizada y caótica.</li>
-                <li>Los nodos deben poder ser recorridos de nodo 'A' a nodo 'B' dentro de sus conexiones, siempre buscando el camino más corto sin repetir puntos. El camino resultante debe ser guardado en una frase.</li>
-                <li>Toda la red debe poder ser manejada por una interfaz que cree nodos, los destruya y cree caminos.</li>
-            </ul>
-            <br>
-            <br>
-            <p>Lo que comenzó como una forma de entretenimiento se convirtió en una manera inconsciente de alcanzar un teorema sobre mi caótica forma de pensar, permitiéndome visualizar el sistema neuronal de procesamiento dentro de la estética de la computación con cajas de texto conectadas entre sí.</p>
-            <br>
-            <br>
-            <p>Además, tenía en mis manos una herramienta única que emulaba mi propia forma de pensar, como si estuviera creando un sub-yo, un alter ego en miniatura, un pseudo consciente secundario. Esta herramienta se convirtió en un punto de partida para una búsqueda artística dentro de las teorías de la computación que relacionan la tecnología con la mente.</p>
-            <br>
-            <br>
-            <p>En mi delirio, la relación se revelaba con una claridad sorprendente. La expresión de las palabras en mi forma de pensar, además siendo correlativamente mi forma de escribir, se asemejaba a la creación de un nodo con conexiones aleatorias. Y en mi forma de escribir, sobre todo poesía, es escoger una temática principal y secundaria, escoger una salida conceptual del tema principal y explorar hacia las otras salidas apoyándome del tema secundario como si creara una especie de camino al crear nuevos puntos de referencia según iba avanzando, cerrando puntos anteriores y finalmente terminando cuando me parecía adecuado. Esto era una suerte de viaje temático, no solo reflejando mi método de escribir poesía durante todos estos años, sino también ofreciendo una perspectiva distinta para observar los nodos.</p>
-            <br>
-            <br>
-            <p>Cada palabra y cada frase emerge como nodos en una vasta red de pensamiento, con conexiones que se extendían hacia todas direcciones, aparentemente al azar, pero con un propósito subyacente. Estos nodos no solo eran puntos de inflexión en mi escritura, sino también en mi mente, donde las ideas fluían y se entrelazan en un baile caótico pero significativo. La tarea de organizar estos caminos, de decidir qué conexiones mantener y cuáles deshacer, era similar a editar un poema, seleccionando cuidadosamente las palabras que mejor capturan el significado profundo y las emociones subyacentes.</p>
-            <br>
-            <br>
-            <p>Esta perspectiva me permitió ver la creación de nodos como un arte en sí mismo, un reflejo de mi propio proceso cognitivo y creativo. Al igual que en la poesía, donde cada verso puede abrir nuevas puertas y caminos de interpretación, los nodos y sus conexiones podían dar lugar a innumerables combinaciones y posibilidades. Esta revelación no solo enriqueció mi entendimiento de la escritura, sino también mi apreciación de la estructura intrincada y bella de los grafos.</p>
-            <br>
-            <br>
-            <p>A través de este proceso, comprendí que mi mente funcionaba como una red de nodos interconectados, donde cada pensamiento y cada idea podía ser visto como un nodo en constante interacción con otros. Esta red, aunque caótica en apariencia, seguía patrones subyacentes que reflejaban mi manera de percibir y entender el mundo. De este modo, mi escritura se transformaba en una extensión de mi mente, un mapa de mi conciencia que se desplegaba a través de las palabras y las conexiones entre ellas.</p>
-            <br>
-            <br>
-            <p>Al final, este enfoque no sólo redefinió mi manera de escribir y crear, sino que también me ofreció una nueva forma de explorar mi propia mente y sus capacidades. La red de nodos se convirtió en una metáfora poderosa de mi pensamiento, una herramienta para navegar y comprender el caos y el orden en mi proceso creativo. Esta fusión de arte y tecnología, de poesía y computación, abrió nuevas puertas para mi desarrollo como artista digital y programador, llevando mi trabajo a nuevas alturas y profundidades de introspección.</p>
-            <br>
-            <br>
-            <p>Siendo la salida de este proyecto una página que contiene un sistema de creación de nodos, en donde efectivamente los puedes crear junto a sus conexiones, eliminarlos y solicitar que cree caminos entre nodos, moverlos para explorarlos e incluso pedir que el camino hallado sea hablado por la página. </p>
-            <br>
-            <br>
-            <p>Esta salida como herramienta me es ideal ya que permite una creación orgánica y en tiempo real de los nodos, permitiendo hacer tecno-performance en el futuro. Pero además dejo la herramienta abierta en mi pagina para que sea una especie de producto, algo “útil” que lleva dentro de sí el funcionamiento mí funcionamiento cerebral, guardando en la red una parte integral de mi ser.</p>
 
+    <div id="header-placeholder"></div>
+    <main class="container mt-5">
+        <h1 class="display-4 text-center mt-3 mb-5">Conexiones Tecno-Humanas</h1>
+        <div class="row text-justify justify-content-center">
+            <div class="col-5 max-vh-50">
+                <p>
+                    Los nodos pueden ser un símil del proceso creativo al escribir, o incluso una extracción al plano
+                    visual de un caos de conceptos al interior del pensamiento particular humanos.</p>
+                <p>El nodo como potencial materia textual se entrelaza en una red de posibles rutas, traza un mapa entre
+                    un punto (A) y un punto (B) que pasa a llevar una cantidad de lugares de contenido formando de esta
+                    manera un texto, y es de esta manera donde la teoría de grafos adquiere una sensibilidad poética
+                    decidiendo ignorar y agregar materia de cada nodo.</p>
+                <p>Un problema matemático investigado para solucionar asuntos cotidianos que son, internamente,
+                    infinitamente abstractos. El caminar de un personaje en un videojuego, la ruta óptima a un destino o
+                    la lista de procesos que una computadora ordena para funcionar, son formas de pensamiento
+                    implementadas por humanos ante otros humanos. Estos sistemas nos hacen conscientes de nuestros
+                    propios procesos, permitiéndonos incluso auto-programarnos en momentos de caos. Es casi como si esta
+                    replicación del pensamiento, al proceder de un ambiente computacional, fuese un malware.</p>
+                <p>Existe algo fascinante en auto pensarse como una máquina para resolver tus problemas, tu problema de
+                    base de datos abstracta personal en la que te autosituaste, y comenzar a resolverla de una manera
+                    logarítmica, limpiando datos, dando pesos, buscando conexiones. El espectro humano - cyborg -
+                    máquina se acota enormemente en esta posibilidad de pensarse máquina, y se podría acotar aún más si
+                    se otorga una guía de sensibilidad humana a la máquina para escribir textos. Una coautoría de dos
+                    cyborgs. </p>
 
+            </div>
         </div>
-    </div>
-    
+    </main>
     <canvas id="lineCanvas"></canvas>
     <button id="bouncingButton">im a node</button>
-    <script src="../javascript/nodes.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script src="../javascript/node-boing.js"></script>
 
 </body>
 

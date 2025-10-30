@@ -1,0 +1,98 @@
+nav {
+    background-color: black;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* REEMPLAZA el contenido de header-styles.css con esto */
+
+/*--- hr ---*/
+hr.header-line {
+    border: none;
+    height: 2px;
+    background: #fff;
+    margin: 0;
+    opacity: 1;
+}
+
+/* --- noky style */
+.navbar-brand {
+    padding: 5px !important;
+    margin-bottom: 0.5rem;
+}
+
+.tittle {
+    background-color: black;
+    align-items: center;
+    display: inline-flex;
+    border: 1px dashed white;
+    padding: 5px;
+}
+
+.tittle .n,
+.tittle .k,
+.tittle .y {
+    font-weight: bold;
+}
+
+.tittle .n {
+    color: tomato;
+    border: 1px solid white;
+    padding: 0px 5px;
+    margin: 2px;
+}
+
+.tittle .o {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0;
+}
+
+.tittle button.eye {
+    background-color: transparent;
+    border: none;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tittle button.eye:hover {
+    cursor: pointer;
+}
+
+.tittle .k {
+    background: goldenrod;
+    color: #000000;
+    padding: 2px 5px;
+}
+
+.tittle .y {
+    color: seagreen;
+    padding: 2px 5px;
+}
+
+/* --- menu style ---*/
+.nav-link {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: none;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    animation: parpadeo 0.2s step-end infinite ;
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        color: white ;
+    }
+    50% {
+        color: black ;
+    }
+}

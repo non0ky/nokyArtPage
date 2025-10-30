@@ -2,13 +2,22 @@ let fra = [' ', 'd', 'o', 'n', 't', ' ', 'c', 'r', 'y', ',', ' ', 'y', 'o', 'u',
 let inst = [];
 let pos = 0;
 
-let px = 20;
+let px = 10;
 let video;
 
+function getContainerSize(){
+  const container = document.querySelector(".p5");
+  return container.clientWidth;
+}
+
 function setup() {
-  let c = createCanvas(500, 500);
-  let container = select(".p5");
-  container.child(c);
+  let container = document.querySelector('.p5');
+  let canvasSize = getContainerSize();
+  let cnv = createCanvas(canvasSize, canvasSize);
+  cnv.parent(container);
+
+  background(0);
+
   video = createCapture(VIDEO);
   video.size(width, height);
   video.hide();
@@ -26,9 +35,7 @@ function setup() {
       inst[y][x] = fra[pos];
     }
   }
-  
 }
-
 
 function draw() {
   background(0);
@@ -37,19 +44,24 @@ function draw() {
   
   for (let x = 0; x < width; x += px){
     for (let y = 0; y < height; y += px){
-      
       let i = (x + y * video.width) * 4;
       let r = video.pixels[i + 0];
       let g = video.pixels[i + 1];
       let b = video.pixels[i + 2];
       let lum = (r + g + b) / 3;
       
-      let tmñ = floor(map(lum, 0, 255, 0, px + 5));
-
-      //fill(random(255), random(255), random(255));
+      let tmñ = floor(map(lum, 0, 255, 0, px * 1.5));
+      
       textSize(tmñ);
       text(inst[y][x], x, y);
     }
+  }
+
+  function windowResized(){
+    //console.log("wu");
+    //print("wuu");
+    let canvasSize = getContainerSize();
+    resizeCanvas(canvasSize, canvasSize);
   }
 
 }
