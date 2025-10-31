@@ -1,5 +1,5 @@
 var nodes = new vis.DataSet([
-    { id: 1, label: 'conexiones tecno-humanas\n(nexo)', x: -28, y: 27 },
+    { id: 1, label: 'conexiones tecno-humanas\n(nexo)', x: -28, y: 27 }, // (eve)
     { id: 2, label: 'treasure map\n(nexo)', x: 80, y: -46 }, 
 
     { id: 3, label: 'mind-to-node\n(2024)', x: 23, y: 158 },   // (iwi)
@@ -12,7 +12,7 @@ var nodes = new vis.DataSet([
 ]);
 
 let links = [
-    "../html/conexiones_tecnohumanas.html", 
+    "../html/conexiones_tecnohumanas.html", // (twt)
     "../html/treasure-map.html",
 
     "../html/nodes.html", // (i.i)
@@ -21,7 +21,7 @@ let links = [
     "../html/la-television-de-mi-abuelita.html",
 
     "../html/trapped_man.html", // (.-.)
-    "../html/linea_de_tren_quilicura.html" // (-_-)
+    "../html/new_linea_tren.html" // (-_-)
 ];
 
 var edges = new vis.DataSet([
