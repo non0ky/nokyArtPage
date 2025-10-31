@@ -1,0 +1,46 @@
+h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.info {
+    color: gray;
+    padding-top: 2px;
+    text-align: center;
+}
+
+.contenido {
+    text-align: center;
+    padding: 5px;
+    font-size: smaller;
+    margin-bottom: 50px;
+}
+
+.contenido p {
+    text-align: justify;
+    display: inline-block;
+    width: 600px;
+}
+
+.contenido ul {
+    width: 300px;
+    text-align: justify;
+    display: inline-block;
+} 
+
+#bouncingButton {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: 1px dashed white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+    color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+.text-justify {
+  text-align: justify;
+}

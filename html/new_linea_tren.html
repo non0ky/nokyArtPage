@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linea de tren</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        .image-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: rgba(0, 0, 0, 0.85);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2vh 2vw;
+            color: white !important;
+
+            z-index: 1080;
+            cursor: zoom-out;
+        }
+
+        .image-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .butt {
+            background-color: black;
+            color: white;
+            border: 1px white dashed;
+            border-radius: 10%;
+        }
+
+        .butt a {
+            text-decoration: none;
+            color: white !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .limit {
+            max-height: 50vh;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+    <div id="header-placeholder"></div>
+
+    <main id="container mt-1">
+        <h1 class="display-4 text-center pt-3">Línea de tren (Quilicura)</h1>
+        <div class="row">
+            <div class="col-md">
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="#"><img src="../data/data-linea-de-tren-quilicura/20231225161710845.jpg"
+                                class="img-fluid p-1" alt="1. Calor urbano, mira donde nos lleva.
+                                2. Nada que divida al paisaje resistirá al paisaje
+                                3. Tajo rural que separa la población de la industría.">
+                        </a>
+                        <a href="#"><img src="../data/data-linea-de-tren-quilicura/20231225161854695.jpg"
+                                class="img-fluid p-1" alt="Tronado por el movimiento de los años, me pregunto qué habrá pasado. Un hoyo que proteja del
+                        frio, un techo que proteja de la interperie."></a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#"><img src="../data/data-linea-de-tren-quilicura/20231225161853324.jpg"
+                                class="img-fluid p-1" alt="Ya no queda (nadie) que lo haya vivido."></a>
+                        <a href="#"><img src="../data/data-linea-de-tren-quilicura/20231225162005193.jpg"
+                                class="img-fluid p-1" alt="Puntos de referencia en unos caminos sin nombre. Historia sin rostro que mirar. Es como un lugar
+                        que rumorea tener un tesoro."></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md text-justify">
+                <p>Titulo: "treasure map: linea de tren (Quilicura)"<br>Medio: Instalación<br>Material: Objeto
+                    encontrado<br>Año: 2023</p>
+                <button class="butt" id="toggleButton">
+                    <a href="#toggleSection">bitacora</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- HIDDEN  -->
+
+        <div class="container mt-5 hidden" id="toggleSection">
+            <div class="row g-5 pt-5 pb-5">
+                <div class="col-12 p-0 ">
+                    <img src="../data/data-linea-de-tren-quilicura/linea.png" class="img-fluid" alt="Separador">
+                </div>
+            </div>
+
+            <!-- PALO-->
+            <div class="row">
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20230908132900655.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20230908132901001.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231001175228264.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231001175205873.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231001175213101.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231001175221157.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231001175313711.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231108235127685.jpg" alt=""
+                            class="img-fluid">
+                    </a><a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20231108235139294.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-4">
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo/20230922135526999.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+                <div class="col-4 text-justify">
+                    <h3>Palos y Tronco</h3>
+                    <p>Una primera intención en esta exploración a este espacio antiguo y sobre cargado era evitar
+                        entregarle una sobre atención a la propia línea de tren y mejor investigar el ecosistema creado
+                        a su alrededor.</p>
+                    <p>Entre la vegetación encontré estos palos que eran parte de un antigüo vallado de alambre de puas,
+                        caido, cortado, quemado. Procedí a rescatarlos de enmedio del pasto, del poco alambre que aun se
+                        ocultaba enrollado bajo el pasto. Es curiosos que estos divisores de regiones puedan estar por
+                        decadas en la naturaleza pero siempre en algún momento el propio paisaje mutante y
+                        reconquistador, los terminan tirando y absorviendo, por lo cual podemos concluir que nada que
+                        divida al paisaje sobrevivirá al paisaje.</p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row g-5">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column gap-3">
+                            <a href=""><img src="../data/data-linea-de-tren-quilicura/palo2/20230912150016494.jpg"
+                                    alt="" class="img-fluid"></a>
+                            <a href=""><img src="../data/data-linea-de-tren-quilicura/palo2/20230915004434527.jpg"
+                                    alt="" class="img-fluid"></a>
+
+                        </div>
+                        <div class="col-6 d-flex flex-column gap-3">
+                            <a href=""><img src="../data/data-linea-de-tren-quilicura/palo2/20230912150016381.jpg"
+                                    alt="" class="img-fluid"></a>
+
+                            <a href=""><img src="../data/data-linea-de-tren-quilicura/palo2/20230912143853293.jpg"
+                                    alt="" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h2>El primer palo</h2>
+                    <p>Y llego con el primer palo de valla, a lo que el profe me dice "Ya Benjamín buen primer avance,
+                        te recomiendo que pruebes a tallar por primera vez en otra madera para que te acostumbres al
+                        material y no dañes esta pieza tan unica que trajiste, como no tienes otor puedes retirarte
+                        nomás, estás listo".</p>
+                    <p>Y le respondo "no, deme diez minutos".
+
+                        "Mucho me parece para un artista" responde de vuelta.
+
+                        Terminando "Bueno, cinco minutos entonces"</p>
+                    <p>Entonces en eso llego al galpon efectivamente cinco minutos después con un árbol casi entero de
+                        unos dos metros aprox.</p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href=""><img src="../data/data-linea-de-tren-quilicura/palo3/20231017172809050.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231017172809850.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231017172809992.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231017172810551.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231017172810551.jpg" alt=""
+                            class="img-fluid"></a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231108235125367.jpg" alt=""
+                            class="img-fluid"></a>
+                </div>
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231108235126537.jpg" alt=""
+                            class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/palo3/20231108235126867.jpg" alt="hey"
+                            class="img-fluid">
+                    </a>
+                    <div class="text-justify">
+                        <h3>Montaje</h3>
+                        <p>
+                            Los palos estan montados en el muro con artefactos metalicos por detrás que dan un resultado
+                            casi flotante, mande a hacer una pieza en torno que era capaz de sujetar uno de los palos
+                            por si solo, y aprovecho de decir que, por la chucha que caro son los tornos, tres de estos
+                            artefactos costaban al rededor de 12mil pesos, solo mandé a hacer uno e intente replicar el
+                            resto en impreción 3D, mala idea. Encima cuando consigo el dinero para pagar las otras dos
+                            que me faltaban rsulta que el tornero era novato y por eso cobraba barato y dos que se había
+                            ido de vacaciones en pleno diciembre. La solución fueron soportes para repisa invisibles,
+                            muy recomendado.</p>
+                        <br>
+                        <p>1. "Calor urbano, mira donde nos lleva".</p>
+                        <p>2. "Nada que divida al paisaje resistirá al paisaje".</p>
+                        <p>3. "Tajo rural que separa la población de la industría".</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 pt-5 pb-5">
+                <div class="col-12 p-0 ">
+                    <img src="../data/data-linea-de-tren-quilicura/tren.png" class="img-fluid" alt="Separador">
+                </div>
+            </div>
+
+            <!-- PARACHOQUE -->
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column gap-3">
+                            <a href="">
+                                <img src="../data/data-linea-de-tren-quilicura/parachoque/20230908132859761.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                            <a href="">
+                                <img src="../data/data-linea-de-tren-quilicura/parachoque/20230908132859973.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-6 d-flex flex-column gap-3">
+                            <a href="">
+                                <img src="../data/data-linea-de-tren-quilicura/parachoque/20240114014025133.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                            <a href="">
+                                <img src="../data/data-linea-de-tren-quilicura/parachoque/20240114014025351.jpg" alt=""
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h3>Parachoque</h3>
+                    <p>Entre el pasto y otros objetos que la gente se deshace cerca de la entrada al camino que recorre
+                        este estrecho espacio, a un lado del camino, estaba este parachoque, con marcas que ya no se
+                        saben que significan, con un icono ortero en el reverso. Ya no se sabrá nunca que fué del resto
+                        de piezas, porque está acabó ahí, porque estaba algo más lejos de la entrada, hay tantas
+                        historias turbias con autos en Quilicura que me llevan a pensar en las locuras que pudieron
+                        haberle pasdo, pero, ahora este objetos es hijo del sitio eriazo, ahora mismo su pasado fue
+                        perternecer a ese espacio y ahora es parte de mi obra.</p>
+                    <p>"Puntos de referencia en unos caminos sin nombre. Historias sin rostro que mirar. Es como un
+                        lugar que rumorea tener un tesoro".</p>
+                </div>
+            </div>
+
+            <div class="row g-5 pt-5 pb-5">
+                <div class="col-12 p-0 ">
+                    <img src="../data/data-linea-de-tren-quilicura/chatarra.png" class="img-fluid" alt="Separador">
+                </div>
+            </div>
+
+            <!-- ADOQUIN -->
+            <div class="row">
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20231225162220456.jpg" alt="" class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20231225162220998.jpg" alt="" class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20231225162222219.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20240114014021910.jpg" alt="" class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20240114014023613.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="text-justify">
+                        <h3>Adoquín</h3>
+                        <p>En la vía del tren de Quilicura, muy cerca de la estación de metro Ferrocarril, se encuentra una casona que en mis sospechas devio ser una antigua parada de trenes para el pequeño pueblo de Quilicura tan lejano a la capital, a todas las personas mayores a quienes les pude preguntar de ella dicen que ya llevaba mucho ahí anetes de que nacieran ellos o incluso sus padres, y claro, investigando la estacion data de 1863. Y es curioso que me han dicho que aun ahí ya estaba abandonado pero según fuentes dicen que su clausura ocurrió en 1992.</p>
+                        <p>"No queda nadie que lo haya vivido".</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/piedra/20240114014023898.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-5 pt-5 pb-5">
+                <div class="col-12 p-0 ">
+                    <img src="../data/data-linea-de-tren-quilicura/casona.png" class="img-fluid" alt="Separador">
+                </div>
+            </div>
+
+            <!-- ESCALERA -->
+             <div class="row">
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/escalera/20231113162616776.jpg" alt="" class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/escalera/20231225161852774.jpg" alt="" class="img-fluid">
+                    </a>
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/escalera/20231225161854695.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-4 d-flex flex-column gap-3">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/escalera/20240114014021910.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="text-justify">
+                        <h3>Escalera</h3>
+                        <p>Como que hay algo raro en esa escalera ¿no?<br>Ni confirmo ni desmiento.</p>
+                        <p>Tronado por el movimiento de los años, me pregunto qué habrá pasado. Un hoyo que proteja del frio, un techo que proteja de la interperie.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <img src="../data/data-linea-de-tren-quilicura/escalera/20240114014023898.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+             </div>
+        </div>
+    </main>
+
+    <script src="../javascript/header.js"></script>
+    <script src="../javaScript/zoom-image.js"></script>
+    <script src="../javaScript/hidden.js"></script>
+</body>
+
+</html>
+</body>
