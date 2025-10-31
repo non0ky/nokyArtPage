@@ -18,7 +18,7 @@ let links = [
     "../html/nodes.html", // (i.i)
     "../html/internal_coding.html", // (qvq)
     "../html/dontcrycam.html", // (. .)
-    "../html/la-television-de-mi-abuelita.html",
+    "../html/television_abuelita.html",
 
     "../html/trapped_man.html", // (.-.)
     "../html/new_linea_tren.html" // (-_-)
