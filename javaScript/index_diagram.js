@@ -1,6 +1,6 @@
 var nodes = new vis.DataSet([
     { id: 1, label: 'conexiones tecno-humanas\n(nexo)', x: -28, y: 27 }, // (eve)
-    { id: 2, label: 'entidades perifericas\n(nexo)', x: 80, y: -46 }, 
+    { id: 2, label: 'entidades perifericas\n(nexo)', x: 80, y: -46 },  // (awa)
 
     { id: 3, label: 'mind-to-node\n(2024)', x: 23, y: 158 },   // (iwi)
     { id: 4, label: 'internal coding\n(2023)', x: 11, y: -110 }, // (owo)
@@ -8,12 +8,13 @@ var nodes = new vis.DataSet([
     { id: 6, label: 'la televisión de mi abuelita\n(tesis)\n(2024)', x: -139, y: 113 },
 
     { id: 7, label: 'trapped-man\n(2024)', x: -127, y: -76 }, // (1o1)
-    { id: 8, label: 'via del tren (quilicura)\n(2023)', x: 206, y: 13 } // (0o0)
+    { id: 8, label: 'via del tren (quilicura)\n(2023)', x: 206, y: 13 }, // (0o0)
+    { id: 9, label: 'ruido blanco\n(2025)', x: 206, y: 13 },
 ]);
 
 let links = [
     "../html/conexiones_tecnohumanas.html", // (twt)
-    "../html/entidades_perifericas.html",
+    "../html/entidades_perifericas.html", // 8.8
 
     "../html/nodes.html", // (i.i)
     "../html/internal_coding.html", // (qvq)
@@ -21,7 +22,8 @@ let links = [
     "../html/television_abuelita.html", // o,,,,o
 
     "../html/trapped_man.html", // (.-.)
-    "../html/new_linea_tren.html" // (-_-)
+    "../html/new_linea_tren.html", // (-_-)
+    "../html/ruido_blanco.html",
 ];
 
 var edges = new vis.DataSet([
@@ -34,6 +36,7 @@ var edges = new vis.DataSet([
     { from: 2, to: 8 },
     { from: 2, to: 1 },
     { from: 7, to: 1 },
+    { from: 2, to: 9 },
 ]);
 
 var container = document.getElementById('network');
