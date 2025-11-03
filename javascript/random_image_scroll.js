@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imgElement = document.getElementById('large-obra');
 
     imgElement.addEventListener('load', () => {
-
-        console.log('¡Imagen cargada! Desplazando al final...');
-
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: 'smooth'
