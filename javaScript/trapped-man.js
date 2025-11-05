@@ -6,15 +6,15 @@ let imgTerm = 920;
 let loadedCount = 0;
 let currentIndex = imgInic;
 
-let t = 0, i = 0, pxTm = 2;
+let t = 0, i = 0, pxTm = 2, txT;
 let prop;
 let frase = [
-             " dont cry",
-             " you are only data, all its okay",
-             " all its okay",
-             " Look at yourself, how many numbers do you see?"
-            ];
-            
+  " dont cry",
+  " you are only data, all its okay",
+  " all its okay",
+  " Look at yourself, how many numbers do you see?"
+];
+
 let fraseAct = 0;
 let letras = Array.from(frase[fraseAct]);
 let nextTime, vel, dir = 1, salto = false;
@@ -26,6 +26,9 @@ function setup() {
   let canvasSize = getContainerSize();
   let cnv = createCanvas(canvasSize, canvasSize);
   cnv.parent(container);
+  console.log(canvasSize);
+  txT = canvasSize / 25;
+  console.log(txT);
 
   fill(255);
   frameRate(30);
@@ -33,17 +36,20 @@ function setup() {
   loadNextImage();
 }
 
-function getContainerSize(){
+function getContainerSize() {
   const container = document.querySelector(".p5");
   return container.clientWidth;
 }
 
-function windowResized(){
-    //console.log("wu");
-    //print("wuu");
-    let canvasSize = getContainerSize();
-    resizeCanvas(canvasSize, canvasSize);
-  }
+function windowResized() {
+  //console.log("wu");
+  //print("wuu");
+  console.log(canvasSize);
+  txT = canvasSize / 25;
+  console.log(txT);
+  let canvasSize = getContainerSize();
+  resizeCanvas(canvasSize, canvasSize);
+}
 
 function draw() {
   background(0);
@@ -82,7 +88,7 @@ function draw() {
 
       var px = img[t].get(x, y);
       var il = brightness(px);
-      var tm = map(il, 0, 255, 2, 25);
+      var tm = map(il, 0, 255, 2, txT);
 
       textSize(tm);
       text(letras[i], (width / 2 - height / 2) + x * prop, y * prop);
@@ -101,7 +107,7 @@ function draw() {
 function loadNextImage() {
   if (currentIndex < imgTerm) {
     //console.log("../data/trapped_man/trapped-" + str(currentIndex) + ".jpg");
-    let path =  "../data/trapped_man/trapped-" + str(currentIndex) + ".jpg";
+    let path = "../data/trapped_man/trapped-" + str(currentIndex) + ".jpg";
     loadImage(path, (loadedImage) => {
       img.push(loadedImage);
       loadedCount++;
