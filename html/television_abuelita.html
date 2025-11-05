@@ -55,6 +55,32 @@
             background-color: black;
             color: white;
         }
+
+        .image-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: rgba(0, 0, 0, 0.85);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2vh 2vw;
+            color: white !important;
+
+            z-index: 1080;
+            cursor: zoom-out;
+        }
+
+        .image-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
     </style>
 </head>
 
@@ -65,10 +91,10 @@
         <h1 class="display-4 text-center mb-3">La televisión de mi abuelita</h1>
 
         <div class="row mb-4">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <img src="../data/la televisión de mi abuelita/i (6).jpg" class="img-fluid" alt="">
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <p class="text-justify">
                     La obra “La televisión de mi abuelita” es un caso de estudio para la exploración y construcción del
                     concepto Tecno-Humano. El montaje enfrenta una televisión CRT con una impresora sobre la cual
@@ -90,7 +116,6 @@
 
                 <div class="row">
                     <div class="col-12 text-center my-4">
-
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-outline-primary switch-button" data-target="#panel-1">
                                 rostros
@@ -108,109 +133,164 @@
             </div>
         </div>
 
-        <!-- rostros -->
         <div id="panel-1" class="container content-panel">
             <h3 class="display-6 text-center mb-3">Mural de rostros</h3>
-            <div class="row lb-12 mb-5">
-                <div class="col-3">
-                    <img src="../data/la televisión de mi abuelita/i (9).jpg" class="img-fluid" alt="">
+            <div class="row">
+                <div class="col-6 col-md-3 p-1">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (9).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-3">
-                    <img src="../data/la televisión de mi abuelita/i (10).jpg" class="img-fluid" alt="">
+                <div class="col-6 col-md-3 p-1">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (10).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-3">
-                    <img src="../data/la televisión de mi abuelita/i (11).jpg" class="img-fluid" alt="">
+                <div class="col-6 col-md-3 p-1">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (11).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-3">
-                    <img src="../data/la televisión de mi abuelita/i (12).jpg" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="row lb-12 mb-5">
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (38).jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (39).jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (40).jpg" class="img-fluid" alt="">
+                <div class="col-6 col-md-3 p-1">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (12).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="row lb-12 mb-5">
-                <div class="col-12">
-                    <img src="../data/la televisión de mi abuelita/i (42).jpg" class="img-fluid" alt="">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (38).jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (39).jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (40).jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 p-1">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (42).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- diagrama -->
+
         <div id="panel-2" class="container content-panel">
             <h3 class="display-6 text-center mb-3">Mural diagrama</h3>
-            <div class="row lb-12">
-                <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (2).jpg" class="img-fluid" alt="">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (2).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-6 mb-5">
-                    <img src="../data/la televisión de mi abuelita/i (4).jpg" class="img-fluid" alt="">
+                <div class="col-12 col-md-6">
+                    <a href="#">
+                        <img src="../data/la televisión de mi abuelita/i (4).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="row lb-12 mb-5">
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (27).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (28).jpg" class="img-fluid" alt="">
+            <div class="row">
+                <div class="col-12 col-md-4 p-1">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (27).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block">
+                        <img src="../data/la televisión de mi abuelita/i (28).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (29).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (30).jpg" class="img-fluid" alt="">
+                <div class="col-12 col-md-4 p-1">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (29).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block">
+                        <img src="../data/la televisión de mi abuelita/i (30).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
-                <div class="col-4">
-                    <img src="../data/la televisión de mi abuelita/i (31).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (32).jpg" class="img-fluid" alt="">
+                <div class="col-12 col-md-4 p-1">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (31).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block">
+                        <img src="../data/la televisión de mi abuelita/i (32).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
             <div class="row">
                 <div id="mynetwork" class="col-12">
-.
                 </div>
             </div>
         </div>
-        <!-- montaje -->
+
         <div id="panel-3" class="container content-panel">
             <h3 class="display-6 text-center mb-3">Montajes</h3>
             <div class="row">
                 <div class="col-12">
-                    <img src="../data/la televisión de mi abuelita/i (8).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (8).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (41).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (41).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
                 <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (26).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (26).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
             <h3 class="display-10">Museo de La Educación Gabriela Mistral</h3>
             <div class="row">
                 <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (13).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (14).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (13).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (14).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
                 <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (15).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (16).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (15).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (16).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <img src="../data/la televisión de mi abuelita/i (20).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (21).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (22).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (20).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (21).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (22).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
                 <div class="col-6">
-
-                    <img src="../data/la televisión de mi abuelita/i (23).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (24).jpg" class="img-fluid mb-3" alt="">
-                    <img src="../data/la televisión de mi abuelita/i (25).jpg" class="img-fluid mb-3" alt="">
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (23).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (24).jpg" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="d-block mb-3">
+                        <img src="../data/la televisión de mi abuelita/i (25).jpg" class="img-fluid" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -220,6 +300,7 @@
     <script src="../javaScript/header.js"></script>
     <script src="../javascript/switch-hidden.js"></script>
     <script src="../javascript/diagrama_LTDMA.js"></script>
+    <script src="../javaScript/zoom-image.js"></script>
 </body>
 
 </html>
